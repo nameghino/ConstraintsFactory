@@ -33,10 +33,12 @@ class RootViewController: UIViewController {
         
         // (first item, attribute, relation, second item, second attribute, multiplier, constant)
         let constraintDefinition: ConstraintTuple = (aView, .Height, .Equal, self.view, .Height, 0.5, 0)
+        let constraint = ConstraintFactory.createConstraint(constraintDefinition)
+
+        self.view.addConstraint(constraint)
         
         self.view.addConstraints(
             ConstraintFactory.createConstraints([
-                constraintDefinition,
                 (aView, .Width, .Equal, self.view, .Width, 0.5, 0),
                 (aView, .CenterX, .Equal, self.view, .CenterX, 1, 0),
                 (aView, .CenterY, .Equal, self.view, .CenterY, 1, 0),
