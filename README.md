@@ -16,7 +16,7 @@ Quick and easy NSLayoutConstraint creation for iOS 8, written in Swift
 
 * Create multiple constraints in one go:
 ```Swift
-        ConstraintFactory.createConstraints([
+        let constraints = ConstraintFactory.createConstraints([
             (aView, .Width, .Equal, self.view, .Width, 0.5, 0),
             (aView, .CenterX, .Equal, self.view, .CenterX, 1, 0),
             (aView, .CenterY, .Equal, self.view, .CenterY, 1, 0),
